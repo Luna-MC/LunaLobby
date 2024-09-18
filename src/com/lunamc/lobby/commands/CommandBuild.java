@@ -17,9 +17,9 @@ public final class CommandBuild implements CommandExecutor {
             user.setBuild(build);
 
             if (build)
-                user.message("&3&l»&7 You can now build.");
+                user.message("&3»&7 You can now build.");
             else
-                user.message("&3&l»&7 You can no longer build.");
+                user.message("&3»&7 You can no longer build.");
         } else
             sender.sendMessage("Only players can use this command.");
 

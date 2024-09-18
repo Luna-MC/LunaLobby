@@ -13,7 +13,4 @@ public final class DummyAPI implements Vault {
     @Override
     public String getSuffix(Player player) { return ""; }
 
-    @Override
-    public void setSuffix(Player player, String suffix) {}
-
 }
