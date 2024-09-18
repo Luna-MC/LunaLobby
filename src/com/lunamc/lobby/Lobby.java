@@ -6,10 +6,13 @@ import com.lunamc.lobby.gadget.gadgets.ServerSelectorGadget;
 import com.lunamc.lobby.gadget.gadgets.TagsGadget;
 import com.lunamc.lobby.listeners.AsyncPlayerChatListener;
 import com.lunamc.lobby.listeners.PlayerInteractListener;
+import com.lunamc.lobby.listeners.PlayerMoveListener;
+import com.lunamc.lobby.listeners.PlayerStatisticIncrementListener;
 import com.lunamc.lobby.listeners.build.BlockBreakListener;
 import com.lunamc.lobby.listeners.build.BlockPlaceListener;
 import com.lunamc.lobby.listeners.health.EntityDamageListener;
 import com.lunamc.lobby.listeners.health.FoodLevelChangeListener;
+import com.lunamc.lobby.listeners.inventory.EntityPickupItemListener;
 import com.lunamc.lobby.listeners.inventory.InventoryClickListener;
 import com.lunamc.lobby.listeners.inventory.PlayerSwapHandItemsListener;
 import com.lunamc.lobby.listeners.login.PlayerJoinListener;
@@ -47,6 +50,7 @@ public final class Lobby extends JavaPlugin {
         manager.registerEvents(new BlockPlaceListener(), this);
         manager.registerEvents(new EntityDamageListener(), this);
         manager.registerEvents(new FoodLevelChangeListener(), this);
+        manager.registerEvents(new EntityPickupItemListener(), this);
         manager.registerEvents(new InventoryClickListener(), this);
         manager.registerEvents(new PlayerSwapHandItemsListener(), this);
         manager.registerEvents(new PlayerJoinListener(), this);
@@ -55,6 +59,8 @@ public final class Lobby extends JavaPlugin {
         manager.registerEvents(new ProjectileHitListener(), this);
         manager.registerEvents(new AsyncPlayerChatListener(), this);
         manager.registerEvents(new PlayerInteractListener(), this);
+        manager.registerEvents(new PlayerMoveListener(), this);
+        manager.registerEvents(new PlayerStatisticIncrementListener(), this);
 
         new ServerSelectorMenu();
 

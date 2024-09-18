@@ -18,6 +18,8 @@ public final class ItemBuilder {
     public ItemBuilder(Material material) {
         item = new ItemStack(material);
         meta = item.getItemMeta();
+
+        meta.addItemFlags(ItemFlag.values());
     }
 
     public ItemBuilder name(String name) {
@@ -39,9 +41,17 @@ public final class ItemBuilder {
         return this;
     }
 
+    public ItemBuilder enchant(Enchantment enchantment, int level) {
+        meta.addEnchant(enchantment, level, true);
+        return this;
+    }
+
     public ItemBuilder enchant() {
-        meta.addEnchant(Enchantment.DURABILITY, 1, true);
-        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        return enchant(Enchantment.DURABILITY, 1);
+    }
+
+    public ItemBuilder unbreakable() {
+        meta.setUnbreakable(true);
         return this;
     }
 
