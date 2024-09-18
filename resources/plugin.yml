@@ -1,0 +1,14 @@
+name: LunaLobby
+version: 1.0
+author: MasterDash5
+api-version: 1.16
+softdepend: [ LuckPerms ]
+main: com.lunamc.lobby.Lobby
+
+commands:
+  build:
+    permission: luna.lobby.build
+
+permissions:
+  luna.lobby.build:
+    default: false
