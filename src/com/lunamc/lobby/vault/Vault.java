@@ -8,4 +8,6 @@ public interface Vault {
 
     String getSuffix(Player player);
 
+    void setSuffix(Player player, String suffix);
+
 }

@@ -20,6 +20,7 @@ import com.lunamc.lobby.listeners.login.PlayerQuitListener;
 import com.lunamc.lobby.listeners.login.PlayerSpawnLocationListener;
 import com.lunamc.lobby.listeners.projectile.ProjectileHitListener;
 import com.lunamc.lobby.menu.menus.ServerSelectorMenu;
+import com.lunamc.lobby.tasks.InterfaceTask;
 import com.lunamc.lobby.vault.Vault;
 import com.lunamc.lobby.vault.api.DummyAPI;
 import com.lunamc.lobby.vault.api.LuckPermsAPI;
@@ -69,6 +70,8 @@ public final class Lobby extends JavaPlugin {
         new TagsGadget();
 
         getCommand("build").setExecutor(new CommandBuild());
+
+        getServer().getScheduler().runTaskTimerAsynchronously(this, new InterfaceTask(), 20, 20);
     }
 
 }

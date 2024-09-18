@@ -1,6 +1,7 @@
 package com.lunamc.lobby.listeners.login;
 
 import com.lunamc.lobby.Lobby;
+import com.lunamc.lobby.User;
 import com.lunamc.lobby.gadget.Gadget;
 import com.lunamc.lobby.utils.ItemBuilder;
 import com.lunamc.lobby.vault.Vault;
@@ -47,6 +48,10 @@ public final class PlayerJoinListener implements Listener {
             inventory.setItem(gadget.getSlot(), gadget.getItem());
 
         player.updateInventory();
+
+        User user = User.getUser(player);
+        user.displayActionbar();
+        user.displayHeaderFooter();
     }
 
 }

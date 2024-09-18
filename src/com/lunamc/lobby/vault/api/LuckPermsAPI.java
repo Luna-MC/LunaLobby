@@ -21,12 +21,16 @@ public final class LuckPermsAPI implements Vault {
 
     @Override
     public String getPrefix(Player player) {
-        return getMetadata(player).getPrefix();
+        String prefix = getMetadata(player).getPrefix();
+
+        return prefix == null ? "" : prefix;
     }
 
     @Override
     public String getSuffix(Player player) {
-        return getMetadata(player).getSuffix();
+        String suffix = getMetadata(player).getSuffix();
+
+        return suffix == null ? "" : suffix;
     }
 
 }

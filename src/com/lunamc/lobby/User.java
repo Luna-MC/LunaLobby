@@ -28,6 +28,28 @@ public final class User {
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
     }
 
+    public void displayHeaderFooter() {
+        int ping = player.spigot().getPing();
+
+        player.setPlayerListHeaderFooter(
+                ChatColor.translateAlternateColorCodes('&',
+                        "&3&l\nLUNAMC" +
+                                "\n&7Ping: &3" + ping + "ms\n"
+                ),
+                ChatColor.translateAlternateColorCodes('&',
+                        "&7\nVisit our store at &3/store" +
+                                "\n&7Join our discord at &3/discord" +
+                                "\n\n&3play.luna-mc.com\n"
+                )
+        );
+    }
+
+    public void displayActionbar() {
+        player.sendActionBar(
+                ChatColor.translateAlternateColorCodes('&', "&3&lplay.luna-mc.com")
+        );
+    }
+
     public boolean getBuild() { return build; }
 
     public void setBuild(boolean build) { this.build = build; }

@@ -34,7 +34,7 @@ public final class ServerSelectorMenu extends Menu {
                 new ItemBuilder(Material.BARRIER)
                         .name("&cComing soon")
                         .build(),
-                (player) -> MessageUtil.message(player, "&3&l»&c Coming soon")
+                (player) -> MessageUtil.message(player, "&3»&c Coming soon")
         );
 
         set(
@@ -42,7 +42,7 @@ public final class ServerSelectorMenu extends Menu {
                 new ItemBuilder(Material.BARRIER)
                         .name("&cComing soon")
                         .build(),
-                (player) -> MessageUtil.message(player, "&3&l»&c Coming soon")
+                (player) -> MessageUtil.message(player, "&3»&c Coming soon")
         );
     }
 
